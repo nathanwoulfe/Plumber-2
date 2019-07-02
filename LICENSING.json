@@ -7,14 +7,14 @@
 }, {
     "title": "Pro",
     "subTitle": "Unlimited everything, all the features",
-    "price": "$1500",
+    "price": "AUD $1500",
     "priceDescription": "12-month license",
     "css": "license-card--large",
     "summary": "The PRO license removes all restrictions and enables all advanced features. It is best suited to large sites with numerous content editors and complex, multi-departmental editing activities."
 }, {
     "title": "Basic",
     "subTitle": "Some limitations, still super powerful",
-    "price": "$500",
+    "price": "AUD $500",
     "priceDescription": "12-month license",
     "summary": "The BASIC license enables most advanced features but maintains the 5 approval group limit. This tier is best suited to mid-sized sites requiring more control over content approval."
 }]
