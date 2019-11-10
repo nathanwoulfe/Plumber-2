@@ -1,6 +1,6 @@
 # Plumber End User Licence Agreement
 
-While the language may be friendly, this Licence Agreement (the Licence) is a legally binding agreement between you (the Client, being a sole trader, partnership or company) and the party recognised as having ownership of the software (the Vendor, and the Product, respectively). Presently, the Vendor is Nathan Woulfe, operating as a sole trader under Australian Business Number x.
+While the language may be friendly, this Licence Agreement (the Licence) is a legally binding agreement between you (the Client, being a sole trader, partnership or company) and the party recognised as having ownership of the software (the Vendor, and the Product, respectively). Presently, the Vendor is Nathan Woulfe, operating as a sole trader under Australian Business Number 76 017 557 607.
 
 Use of the Software constitutes acceptance of the terms included below, by the Client and any employees, unless a separate agreement is reached between the Client and the Vendor. If you don’t agree with any of the terms below, don’t install the Product.
 
