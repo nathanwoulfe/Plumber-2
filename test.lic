@@ -1,0 +1,12 @@
+{
+  "customer": {
+    "name": "Jane Doe",
+    "id": 1,
+    "email": "jane@mail.com"
+  },
+  "plan": {
+    "nickname": "pro"
+  },
+  "domain": null,
+  "id": 1
+}
