@@ -1,13 +1,3 @@
-### Installing
-
-If you're reading this, you've successfully installed the latest version of Plumber, the workflow solution for Umbraco.
-
-The installation process created a new backoffice section (you're in it), and added a suite of new features to your Umbraco website.
-
-The installer grants access to the new section for all users in the Administrators group. You may wish to modify this according to best suit your site and requirements.
-
-Check in on the Workflow section dashboard to stay up-to-date with the latest release - when the installed version is superceded, Plumber will prompt you to upgrade. Updates should be performed via Nuget.
-
 ### Overview
 
 Plumber extends Umbraco's standard publishing model to allow creation of multi-stage approval workflows.
@@ -25,6 +15,19 @@ Tasks can be approved (or cancelled or rejected) from the dashboard or from the 
 The workflow dashboard updates to reflect the state of each task, providing an easy overview of a user's submissions and tasks.
 
 Rejecting a task returns the workflow to the original author, who can update the content and resubmit. The resubmitted content does not restart the workflow, but returns to the stage at which it was rejected.
+
+### Licensing
+
+Plumber is a licensed product, but doesn't require a purchase to use. Licenses are offered across three tiers:
+- **Trial:** the Trial license is free, limits total groups to 5 and restricts access to some advanced features (content-type approval flows, excluding nodes, offline approval)
+- **Basic:** enables all features but maintains a 10-group limit
+- **Pro:** unlimited everything
+
+All licenses are tied to a single production domain and any subdomains, plus localhost on any port. 
+
+The licensing model uses Stripe as a payment provider, and requires a periodic network request to check for a valid license (ie Plumber will poll the payment server when the local license has expired, requesting the refreshed license). If this is not viable for your install, the one-off lifetime license removes this requirement.
+
+Licenses can be purchased directly from the backoffice, from the Licensing view in the Workflow section.
 
 ### Settings
 
@@ -58,6 +61,8 @@ Add users to approval groups to determine which users will be responsible for ap
 
 The Approval groups view in the Workflow section lists the active groups, their membership, permissions, and a quick link to email the group. Select a group from the list to edit settings, permissions and membership.
 
+Total groups is limited to 5 on the Trial license and 10 on Basic. The Pro-level license removes this restriction.
+
 #### Settings
 - **Group email:** sometimes it's more appropriate to send workflow notifications to a generic inbox rather than the individual group members. Add a value here to do exactly that.
 - **Description:** it isn't used anywhere other than the group view. It's a note to remind you why the group exists.
@@ -67,7 +72,7 @@ The Approval groups view in the Workflow section lists the active groups, their 
 Provides an overview of the current workflow roles for the group, both node-based and document-type based.
 
 #### Members
-Manage the membership for the given user group. Group membership is limited to 5 per group on the Trial license and 10 on Basic. The Pro-level license removes this restriction.
+Manage the membership for the given user group. Easy.
 
 #### History
 Provides an overview of the workflow activity for the current group.
@@ -86,12 +91,28 @@ Current responsibilites for groups can be reviewed on the user group view, for e
 
 Document-type approval flows can also include conditional groups - ie only include Group B in the workflow when the meta-description property has changed.
 
-### Dashboards
+### Dashboards and buttons
 
-Plumber adds a set of dashboards to the Umbraco install:
+Plumber adds two dashboards to the Umbraco install:
 
-- **User dashboard:** added in the content section, this view displays all submissions and pending tasks for the current user.
-- **Admin dashboard:** the default view in the Workflow section, the admin dashboard renders two tabs
+- **User dashboard:** added in the content section, this view displays all submissions and pending tasks for the current user
+- **Admin dashboard:** the default view in the Workflow section, displaying a chart of recent workflow activity, and any relevant messaging related to upgrades
+
+Plumber replaces the default Umbraco button set in the editor drawer. Depending on user permissions, content state and workflow state, the button set will display one of the following:
+
+- Save
+- Request publish
+- Approve changes
+
+The button set dropdown will include additional options:
+
+- Reject changes
+- Cancel workflow
+- Request unpublish
+
+Plumber overrides Umbraco's user/group publishing permissions. Provided the user has permission to update the node, they will be able to intiate a workflow process on that node. Plumber essentially shifts Umbraco from a centrally administered publishing model (ie controlled by a site administrator) to a distributed model, where editors publish content based on their responsibilities assigned through inclusion in workflows.
+
+In cases where the content is already in a workflow, a notification is displayed next to the button set. For nodes where the workflow has been disabled, the default Umbraco options are displayed.
 
 ### Content app
 
@@ -117,24 +138,6 @@ While there's no mechanism preventing modifying the approval flow when content i
 
 #### History
 The History sub-section provides a chronological audit trail of workflow activity for the current node. The Detail button in the right-most column launches an overlay with similar content to that displayed on the Active workflow sub-section.
-
-### Button drawer
-
-Plumber replaces the default Umbraco button set in the editor drawer. Depending on user permissions, content state and workflow state, the button set will display one of the following:
-
-- Save
-- Request publish
-- Approve changes
-
-The button set dropdown will include additional options:
-
-- Reject changes
-- Cancel workflow
-- Request unpublish
-
-Plumber overrides Umbraco's user/group publishing permissions. Provided the user has permission to update the node, they will be able to intiate a workflow process on that node. Plumber essentially shifts Umbraco from a centrally administered publishing model (ie controlled by a site administrator) to a distributed model, where editors publish content based on their responsibilities assigned through inclusion in workflows.
-
-In cases where the content is already in a workflow, a notification is displayed next to the button set. For nodes where the workflow has been disabled, the default Umbraco options are displayed.
 
 ### Offline approval - v1.1.0+
 
