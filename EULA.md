@@ -2,27 +2,27 @@
 
 While the language may be friendly, this Licence Agreement (the Licence) is a legally binding agreement between you (the Client, being a sole trader, partnership or company) and the party recognised as having ownership of the software (the Vendor, and the Product, respectively). Presently, the Vendor is Nathan Woulfe, operating as a sole trader under Australian Business Number 76 017 557 607.
 
-Use of the Software constitutes acceptance of the terms included below, by the Client and any employees, unless a separate agreement is reached between the Client and the Vendor. If you don’t agree with any of the terms below, don’t install the Product.
+Use of the Software constitutes acceptance of the terms included below, by the Client and any employees, unless a separate agreement is reached between the Client and the Vendor. If you don't agree with any of the terms below, don't install the Product.
 
 ## Who?
 
-The Product is licenced to the Client for use on the registered domain, and any internal, non-public domains, for the Client’s business purposes. Additional domains require additional licences.
+The Product is licenced to the Client for use on the registered domain, and any internal, non-public domains, for the Client's business purposes. Additional domains require additional licences.
 
 Any party wishing to use the Product requires a current, active Licence. Given the Licence model include a free option, this is fair and reasonable, yeah?
 
 ## What?
 
-The Licence grants non-transferable and non-exclusive use of the Product. The Licence does not grant rights for duplication, modification, disassembly, transfer, sub-licensing, reverse-engineering, molecular engineering, et al.
+The Licence grants non-transferable and non-exclusive use of the Product. The Licence does not grant rights for duplication, modification, disassembly, transfer, sub-licensing, reverse-engineering, molecular engineering, et al. The Licence is not a support agreement, nor does purchasing a Licence consititute any entitlement to support.
 
 Please do not use the Product in the production or dissemination of nuclear weapons. The Vendor does not want to be associated with any such shenanigans.
 
-The Licence does not grant rights to access the Product’s source code, but that is not to say the source code or parts of source code may be made publicly available in the future. The Licence does not constitute ownership in any way, shape or form.
+The Licence does not grant rights to access the Product's source code, but that is not to say the source code or parts of source code may be made publicly available in the future. The Licence does not constitute ownership in any way, shape or form.
 
 ## Copyright
 
-It should go without saying that the Product is protect by any and all relevant copyright and intellectual property laws and treaties, in favour of the Vendor. Per above, the Licence does not constitute ownership or any ownership stake in the Product or any of its component parts.
+It should go without saying that the Product is protected by any and all relevant copyright and intellectual property laws and treaties, in favour of the Vendor. Per above, the Licence does not constitute ownership or any ownership stake in the Product or any of its component parts.
 
-The internet might be a wild west for copyright infringers, but that doesn’t make you a cowboy. Do the right thing.
+The internet might be a wild west for copyright infringers, but that doesn't make you a cowboy. Do the right thing.
 
 ## Warranty
 
@@ -34,7 +34,7 @@ The Vendor is not liable to you, the Client, in any way, shape or form, for any 
 
 If you, the Client, chose to do the wrong thing, the Vendor is wholly indemnified against any claims, costs, expenses, damages and so forth, that may arise from the Client misusing the Product.
 
-Failure to enforce, or delaying the enforcement the Licence does not constitute waiving of the Vendor’s sole rights to enforce the terms of the Licence.
+Failure to enforce, or delaying the enforcement the Licence does not constitute waiving of the Vendor's sole rights to enforce the terms of the Licence.
 
 ## Termination
 
@@ -70,6 +70,6 @@ The Vendor collects no identifying information from Client installations of the 
 
 ## Law and jurisdiction
 
-The Licence and its component parts are covered by Australian law. The Client and the Vendor agree to the exclusive jurisdiction of the Australian courts. Not that it’s every going to come to that, is it?
+The Licence and its component parts are covered by Australian law. The Client and the Vendor agree to the exclusive jurisdiction of the Australian courts. Not that it's every going to come to that, is it?
 
-Last updated 11 November 2019
+Last updated 18 May 2020
