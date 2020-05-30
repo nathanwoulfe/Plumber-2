@@ -202,17 +202,3 @@ public class ContentEventsComponent : IComponent
 ```
 
 For all services, `e` will provide the object being created, updated or deleted (typically a poco). 
-
-### Deployment tools<a name="deployment-tools"></a>
-
-This feature is experimental. Use it at your own risk.
-
-The Deployment tab in the Workflow section provides an interface for exporting and importing Plumber configuration, for deployment across different environments. 
-
-The endpoints used for both actions can be access programmatically as part of a deployment script.
-
-For manual exports, the Export Plumber config does exactly that - generates a JSON representation of all data in the Plumber database tables (settings, usergroups, user2usergroup and usergrouppermissions).
-
-This JSON model can then be re-imported into other environments.
-
-Warning - the import is destructive and can not be reversed. If the uploaded configuration model is valid, all data in the relevant tables will be deleted and overwritten.
