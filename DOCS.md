@@ -8,7 +8,7 @@ A user can be a member of multiple groups in the same workflow, although again, 
 
 To initiate an approval workflow, a user updates content, saves their changes, then selects 'Request approval' from the editor button drawer.
 
-After entering a comment describing the nature off the changes, and submitting the request, members of the approving group are notified via email, and have a task pushed into their workflow dashboard.
+After entering a comment describing the nature of the changes, and submitting the request, members of the approving group are notified via email, and have a task pushed into their workflow dashboard.
 
 Tasks can be approved (or cancelled or rejected) from the dashboard or from the content node button drawer.
 
@@ -98,21 +98,11 @@ Plumber adds two dashboards to the Umbraco install:
 - **User dashboard:** added in the content section, this view displays all submissions and pending tasks for the current user
 - **Admin dashboard:** the default view in the Workflow section, displaying a chart of recent workflow activity, and any relevant messaging related to upgrades
 
-Plumber replaces the default Umbraco button set in the editor drawer. Depending on user permissions, content state and workflow state, the button set will display one of the following:
-
-- Save
-- Request publish
-- Approve changes
-
-The button set dropdown will include additional options:
-
-- Reject changes
-- Cancel workflow
-- Request unpublish
+Plumber replaces the default Umbraco button set in the editor drawer. When a workflow is active on the current node, the button is singular, linking to the workflow content app. When no workflow is active, the button state is determined by the current user's permissions.
 
 Plumber overrides Umbraco's user/group publishing permissions. Provided the user has permission to update the node, they will be able to intiate a workflow process on that node. Plumber essentially shifts Umbraco from a centrally administered publishing model (ie controlled by a site administrator) to a distributed model, where editors publish content based on their responsibilities assigned through inclusion in workflows.
 
-In cases where the content is already in a workflow, a notification is displayed next to the button set. For nodes where the workflow has been disabled, the default Umbraco options are displayed.
+In cases where the content is already in a workflow, a notification is displayed at the top of the editor (depending on settings, content edits may also be disabled). For nodes where the workflow has been disabled, the default Umbraco options are displayed.
 
 ### Content app
 
@@ -134,18 +124,18 @@ The Configuration sub-section provides the interface for configuring (surprise!)
 
 Approval flow groups can be reordered via drag and drop. 
 
-While there's no mechanism preventing modifying the approval flow when content is in an active workflow, doing so may (probably will) have unexpected consequences. Best to close any active processes before modifying the approval flow.
+Configuration can not be modified when a content node is in a workflow process.
 
 #### History
 The History sub-section provides a chronological audit trail of workflow activity for the current node. The Detail button in the right-most column launches an overlay with similar content to that displayed on the Active workflow sub-section.
 
-### Offline approval - v1.1.0+
+### Offline approval
 
-Groups can optional be given permission to action workflow tasks without logging in to Umbraco.
+Groups can optional be given permission to action workflow tasks without logging in to Umbraco. This feature requires a paid license.
 
 By setting the Offline Approval checkbox to true on the edit group view, all email notifications sent to members of the group will include a personalized link to a preview page.
 
-The preview page exposes the current saved page, with the options to approve or reject the change. It is not possible to edit the content or cancel the workflow from the offline preview.
+The preview page exposes the current saved page, with the options to approve or reject the change. It is not possible to edit the content from the offline approval view.
 
 This feature is intended for use in situations where the approval group membership is a single user who would not otherwise be using Umbraco - for example, a manager may want to approve media releases before publishing, but does not othewise need access to Umbraco.
 
