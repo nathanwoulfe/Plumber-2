@@ -18,16 +18,7 @@ Rejecting a task returns the workflow to the original author, who can update the
 
 ### Licensing
 
-Plumber is a licensed product, but doesn't require a purchase to use. Licenses are offered across three tiers:
-- **Trial:** the Trial license is free, limits total groups to 5 and restricts access to some advanced features (content-type approval flows, excluding nodes, offline approval)
-- **Basic:** enables all features but maintains a 10-group limit
-- **Pro:** unlimited everything
-
-All licenses are tied to a single production domain and any subdomains, plus localhost on any port. 
-
-The licensing model uses Stripe as a payment provider, and requires a periodic network request to check for a valid license (ie Plumber will poll the payment server when the local license has expired, requesting the refreshed license). If this is not viable for your install, the one-off lifetime license removes this requirement.
-
-Licenses can be purchased directly from the backoffice, from the Licensing view in the Workflow section.
+Plumber is a licensed product, but doesn't require a purchase to use. New installs are defaulted to a trial license, while the paid license is [available for purchase](https://this-red-wolf.s1.umbraco.io). The trial license introduces some restrictions around advanced features but is otherwise a full-featured workflow platform. The paid license is valid for one top-level domain and all it's subdomains.
 
 ### Settings
 
