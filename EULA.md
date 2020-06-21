@@ -52,14 +52,6 @@ Product support is provided by the Vendor and is not included, implicitly or oth
 
 The Vendor will address breaking changes introduced by Umbraco upgrades in a timely fashion, but offers no guarantees as to the timeliness of any required bug fixes or the release of the updated Product.
 
-### Phone home
-
-The Product communicates periodically with a server maintained by the Vendor, to establish licence validity. At some point in the future, additional telemetry information may be collected in order to assist development decisions and improve the Product.
-
-No personally identifying information is transmitted, nor will be at any time in the future. This is not Silicon Valley, Plumber is not Pied Piper.
-
-Attempting to disable or intercept the Phone Home request is a violation of the terms of this Licence, and frankly, poor digital citizenship.
-
 ### Privacy
 
 The Vendor uses a third party payment provider to manage licencing. The third party collects and stores identifying information in line with its own privacy and data collection policies. The Vendor, as a customer of the payment provider, is bound by the applicable provider policies and has access to that data.
@@ -72,4 +64,4 @@ The Vendor collects no identifying information from Client installations of the 
 
 The Licence and its component parts are covered by Australian law. The Client and the Vendor agree to the exclusive jurisdiction of the Australian courts. Not that it's every going to come to that, is it?
 
-Last updated 18 May 2020
+Last updated 22 June 2020
