@@ -13,12 +13,7 @@ Noticed this repo doesn't have any code? That's because Plumber 2 is a licensed 
 
 Plumber will always have a free version. It still requires a valid license, but comes at no cost. The free version does have some restrictions on features and functionality (5 group maximum, some advanced features disabled), but those aside, is still a full-featured solution and will be perfect for smaller, less complex implementations.
 
-Paid licenses come in three variants:
-- Basic: &euro;15/month subscription. All features, 10 group limit.
-- Pro: &euro;25/month subscription. All features, no restrictions.
-- One-off: &euro;900 one-time payment. All features, no restrictions, no ongoing cost.
-
-Subscriptions and payment information are managed by Stripe. Licenses are generated from the Workflow section in the Umbraco backoffice.
+The paid license is a one-off, &euro;900 one-time payment. All features, no restrictions, no ongoing cost.
 
 There's a whole lot more boring stuff in the [EULA](EULA.md).
 
