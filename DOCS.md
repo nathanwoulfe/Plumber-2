@@ -18,7 +18,7 @@ Rejecting a task returns the workflow to the original author, who can update the
 
 ### Licensing
 
-Plumber is a licensed product, but doesn't require a purchase to use. New installs are defaulted to a trial license, while the paid license is [available for purchase](https://this-red-wolf.s1.umbraco.io). The trial license introduces some restrictions around advanced features but is otherwise a full-featured workflow platform. The paid license is valid for one top-level domain and all it's subdomains.
+Plumber is a licensed product, but doesn't require a purchase to use. New installs are defaulted to a trial license, while the paid license is [available for purchase](https://this-red-wolf.s1.umbraco.io). The trial license introduces some restrictions around advanced features but is otherwise a full-featured workflow platform. The paid license is valid for one top-level domain and all its subdomains.
 
 ### Settings
 
