@@ -27,14 +27,14 @@ Plumber comes pre-wired with sensible defaults, but these should be modified to 
 - **Flow type:** how should the approval flow progress? These options manage how the change author is included in the workflow:
     - **Explicit:** all steps of the workflow must be completed, and all users will be notified of tasks (including the change author)
     - **Implicit:** all steps where the original change author is NOT a member of the group must be completed. Steps where the original change author is a member of the approving group will be completed automatically, and noted in the workflow history as not required.
-	- **Exclude:** similar to Explicit, in that all steps must be completed, but the original change author is not included in notifications or shown dashboard tasks
+    - **Exclude:** similar to Explicit, in that all steps must be completed, but the original change author is not included in notifications or shown dashboard tasks
 - **Lock active content:** how should content in a workflow be managed? Set true or false to determine whether the approval group responsible for the active workflow step can make modifications to the content.
 - **Send notifications:** if your users are active in the backoffice, email notifications might not be required. Turn them off here.
 - **Workflow email:** Set a sender address for notification emails. This defaults to the system email as defined in umbracoSettings.config
 - **Site URL:** the URL for the public website (including schema - http[s])
 - **Edit site URL:** the URL for the editing environment (including schema - http[s])
-- **Exclude nodes:** nodes selected here are excluded from the workflow engine and will be published per the configured Umbraco user permissions. Requires Basic or Pro license.
-- **Document-type approvals:** configure workflows to be applied to all content of the selected document type. Refer to [Approval flow types](#approval-flow-types) for more information. Requires Basic or Pro license.
+- **Exclude nodes:** nodes selected here are excluded from the workflow engine and will be published per the configured Umbraco user permissions. Requires license.
+- **Document-type approvals:** configure workflows to be applied to all content of the selected document type. Refer to [Approval flow types](#approval-flow-types) for more information. Requires license.
 
 ### Upgrades
 
@@ -42,7 +42,7 @@ Plumber will display a prompt on the Workflow section dashboard when a new versi
 
 Displaying the prompt is determined by comparing the assembly version of the current installed version with the latest released version tagged in the GitHub repository.
 
-If the remote version is newer than the installed package, the upgrade prompt displays the release notes and a link to the GitHub release. Updates should be installed via Nuget.
+If the remote version is newer than the installed package, the upgrade prompt displays the release notes and a link to the GitHub release. Updates should be installed via NuGet.
 
 ### Approval groups
 
@@ -52,7 +52,7 @@ Add users to approval groups to determine which users will be responsible for ap
 
 The Approval groups view in the Workflow section lists the active groups, their membership, permissions, and a quick link to email the group. Select a group from the list to edit settings, permissions and membership.
 
-Total groups is limited to 5 on the Trial license and 10 on Basic. The Pro-level license removes this restriction.
+Total groups is limited to 5 on unlicensed installs, the paid license removes this restriction.
 
 #### Settings
 - **Group email:** sometimes it's more appropriate to send workflow notifications to a generic inbox rather than the individual group members. Add a value here to do exactly that.
@@ -75,7 +75,7 @@ Approval flows come in three flavours: explicit, inherited and document-type.
 A given content node may have all three approval flow types applied, but only one will be applied per the following order of priority:
 
 - **Explicit:** set directly on a content node via the context menu. This type will take priority over all others.
-- **Document-type:** set in the settings section. This approval flow will apply to all content of the selected document type, unless the node has an explicit flow set. Requires Basic or Pro license.
+- **Document-type:** set in the settings section. This approval flow will apply to all content of the selected document type, unless the node has an explicit flow set. Requires  license.
 - **Inherited:** if a node has no explicit approval flow, nor a flow applied to its document-type, Plumber will traverse the content tree until it finds a node with an explicit flow, and will use this flow for the current change.
 
 Current responsibilites for groups can be reviewed on the user group view, for explicit and document-type approval flows only.
@@ -166,7 +166,7 @@ The processes raise events whenever a workflow instance is created or updated.
 
 #### Event subscription
 
-Subscribe to events in the same way you would any native Umbraco events - by adding a handler in a Component:
+Subscribe to events in the same way as Umbraco events - by adding a handler in a Component:
 
 ```csharp
 public class ContentEventsComponent : IComponent
@@ -182,4 +182,4 @@ public class ContentEventsComponent : IComponent
 }
 ```
 
-For all services, `e` will provide the object being created, updated or deleted (typically a poco). 
+For all services, `e` will provide the object being created, updated or deleted. 
