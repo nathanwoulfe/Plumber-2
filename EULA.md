@@ -46,11 +46,13 @@ The conditions of this Licence operate independently. If a recognised authority 
 
 ### Upgrades and support
 
-The Product is licenced for use on Umbraco version 8, including any future minor releases. Licencing for Umbraco 9 will be assessed if and when that version is released, any may constitute a new licence agreement.
+The Product is licenced for use on Umbraco version 8, including any future minor releases. Licencing for Umbraco 9 will be assessed if and when that version is released, and may constitute a new licence agreement.
 
 Product support is provided by the Vendor and is not included, implicitly or otherwise, with the purchase of a paid Licence.
 
 The Vendor will address breaking changes introduced by Umbraco upgrades in a timely fashion, but offers no guarantees as to the timeliness of any required bug fixes or the release of the updated Product.
+
+In the event that the project is abandoned by the vendor, source code and associated assets will be turned over to the Umbraco community.
 
 ### Privacy
 
