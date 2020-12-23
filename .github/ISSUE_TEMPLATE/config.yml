@@ -1,0 +1,6 @@
+blank_issues_enabled: true
+contact_links:
+    - name: Questions and queries
+      url: https://github.com/nathanwoulfe/Plumber-2/discussions
+      about: This issue tracker is NOT meant for support questions - these belong in discussions
+    
