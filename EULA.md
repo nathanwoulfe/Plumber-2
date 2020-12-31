@@ -2,17 +2,17 @@
 
 While the language may be friendly, this Licence Agreement (the Licence) is a legally binding agreement between you (the Client, being a sole trader, partnership or company) and the party recognised as having ownership of the software (the Vendor, and the Product, respectively). Presently, the Vendor is Nathan Woulfe, operating as a sole trader under Australian Business Number 76 017 557 607.
 
-Use of the Software constitutes acceptance of the terms included below, by the Client and any employees, unless a separate agreement is reached between the Client and the Vendor. If you don't agree with any of the terms below, don't install the Product.
+Use of the Software constitutes acceptance of the terms included below, by the Client and any employees, unless a separate agreement is reached between the Client and the Vendor. If you don't agree with any of the terms below, don't install the Product. The Licence terms included below should not be confused with the paid license key.
 
 ### Who?
 
 The Product is licenced to the Client for use on the registered domain, and any internal, non-public domains, for the Client's business purposes. Additional domains require additional licences.
 
-Any party wishing to use the Product requires a current, active Licence. Given the Licence model include a free option, this is fair and reasonable, yeah?
+The Product is available for use without a paid licence key, with some feature restrictions. Future features will be included on the free or paid versions at the Vendor's sole discretion.
 
 ### What?
 
-The Licence grants non-transferable and non-exclusive use of the Product. The Licence does not grant rights for duplication, modification, disassembly, transfer, sub-licensing, reverse-engineering, molecular engineering, et al. The Licence is not a support agreement, nor does purchasing a Licence consititute any entitlement to support.
+The Licence grants non-transferable and non-exclusive use of the Product. The Licence does not grant rights for duplication, modification, disassembly, transfer, sub-licensing, reverse-engineering, molecular engineering, et al. Accepting the Licence is not a support agreement, nor does purchasing a license key consititute any entitlement to support.
 
 Please do not use the Product in the production or dissemination of nuclear weapons. The Vendor does not want to be associated with any such shenanigans.
 
@@ -26,7 +26,7 @@ The internet might be a wild west for copyright infringers, but that doesn't mak
 
 ### Warranty
 
-There is no warranty. The Product is provided AS IS, with the Vendor making no warranties, express or implied, as to the operation of the Product or that it will meet the Client’s requirements. This is software, there will be bugs, and the risk that comes with those bugs is accepted entirely by the Client
+There is no warranty. The Product is provided AS IS, with the Vendor making no warranties, express or implied, as to the operation of the Product or that it will meet the Client’s requirements. This is software, there will be bugs, and the risk that comes with those bugs is accepted entirely by the Client.
 
 ### Limitations and Liability
 
@@ -46,17 +46,17 @@ The conditions of this Licence operate independently. If a recognised authority 
 
 ### Upgrades and support
 
-The Product is licenced for use on Umbraco version 8, including any future minor releases. Licencing for Umbraco 9 will be assessed if and when that version is released, and may constitute a new licence agreement.
+The Product is licenced for use on Umbraco version 8, including any future minor releases. Licencing for future Umbraco versions will be assessed if and when that version is released, and may constitute a new licence agreement. Future Umbraco versions may require the purchase of a new or bridging license key.
 
 Product support is provided by the Vendor and is not included, implicitly or otherwise, with the purchase of a paid Licence.
 
 The Vendor will address breaking changes introduced by Umbraco upgrades in a timely fashion, but offers no guarantees as to the timeliness of any required bug fixes or the release of the updated Product.
 
-In the event that the project is abandoned by the vendor, source code and associated assets will be turned over to the Umbraco community.
+In the event that the project is abandoned by the Vendor, source code and associated assets will be turned over to the Umbraco community.
 
 ### Privacy
 
-The Vendor uses a third party payment provider to manage licencing. The third party collects and stores identifying information in line with its own privacy and data collection policies. The Vendor, as a customer of the payment provider, is bound by the applicable provider policies and has access to that data.
+The Vendor uses a third party payment provider to manage license key purchases. The third party collects and stores identifying information in line with its own privacy and data collection policies. The Vendor, as a customer of the payment provider, is bound by the applicable provider policies and has access to that data.
 
 At the date of this agreement, the payment provider is Stripe Payments Australia Pty Ltd A.C.N. 160 180 343.
 
@@ -64,6 +64,6 @@ The Vendor collects no identifying information from Client installations of the 
 
 ### Law and jurisdiction
 
-The Licence and its component parts are covered by Australian law. The Client and the Vendor agree to the exclusive jurisdiction of the Australian courts. Not that it's every going to come to that, is it?
+The Licence and its component parts are covered by Australian law. The Client and the Vendor agree to the exclusive jurisdiction of the Australian courts. Not that it's ever going to come to that, is it?
 
-Last updated 22 June 2020
+Last updated 31 December 2020
