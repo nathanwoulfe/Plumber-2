@@ -31,5 +31,8 @@ If applicable, add screenshots to help explain your problem.
 **Plumber version**
 Which version of Plumber does the bug occur in?
 
+**Licensed version?**
+While buying a license does not buy support, bugs and feature requests from licensed users will be prioritised
+
 **Additional context**
 Add any other context about the problem here.
