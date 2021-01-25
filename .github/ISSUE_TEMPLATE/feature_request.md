@@ -16,5 +16,8 @@ A clear and concise description of what you want to happen.
 **Describe alternatives you've considered**
 A clear and concise description of any alternative solutions or features you've considered.
 
+**Licensed version?**
+While buying a license does not buy support, bugs and feature requests from licensed users will be prioritised
+
 **Additional context**
 Add any other context or screenshots about the feature request here.
