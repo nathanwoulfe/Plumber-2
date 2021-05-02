@@ -32,7 +32,7 @@ Plumber comes pre-wired with sensible defaults, but these should be modified to 
 - **Exclude nodes:** nodes selected here are excluded from the workflow engine and will be published per the configured Umbraco user permissions. Requires license.
 - **Document-type approvals:** configure workflows to be applied to all content of the selected document type. Refer to [Approval flow types](#approval-flow-types) for more information. Requires license.
 
-### Notifications and reminders (from v1.6.0)
+### Notifications and reminders
 
 Plumber 1.6.0 introduces a more mature and versatile notifications engine, allowing deep configuration of email notifications for all workflow activities. 
 
