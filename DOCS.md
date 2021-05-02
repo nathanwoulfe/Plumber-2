@@ -2,13 +2,13 @@
 
 Plumber extends Umbraco's standard publishing model to allow creation of multi-stage approval workflows.
 
-A workflow process can comprise multiple steps (no limit aside from practicality), with multiple users assigned to the group responsible for providing approval at each step.
+A workflow process comprises multiple steps (no limit aside from practicality), with multiple users assigned to the group responsible for providing approval at each step.
 
 A user can be a member of multiple groups in the same workflow, although again, for practicality's sake, this probably doesn't make sense.
 
 To initiate an approval workflow, a user updates content, saves their changes, then selects 'Request approval' from the editor button drawer.
 
-After entering a comment describing the nature of the changes, and submitting the request, members of the approving group are notified via email, and have a task pushed into their workflow dashboard.
+After entering a comment describing the nature of the changes, and submitting the request, members of the approving group are notified via email, and have a task pushed into their workflow dashboard. When initiating a workflow, the user can choose to add a document attachment - eg an email approving or requesting the change be made.
 
 Tasks can be approved (or cancelled or rejected) from the dashboard or from the content node button drawer.
 
@@ -18,7 +18,7 @@ Rejecting a task returns the workflow to the original author, who can update the
 
 ### Licensing
 
-Plumber is a licensed product, but doesn't require a purchase to use. New installs are defaulted to a trial license, while the paid license is [available for purchase](https://this-red-wolf.s1.umbraco.io). The trial license introduces some restrictions around advanced features but is otherwise a full-featured workflow platform. The paid license is valid for one top-level domain and all its subdomains.
+Plumber is a licensed product, but doesn't require a purchase to use. New installs are defaulted to a trial license, while the paid license is [available for purchase](https://thisredwolf.com). The trial license introduces some restrictions around advanced features but is otherwise a full-featured workflow platform. The paid license is valid for one top-level domain and all its subdomains.
 
 ### Settings
 
@@ -29,12 +29,60 @@ Plumber comes pre-wired with sensible defaults, but these should be modified to 
     - **Implicit:** all steps where the original change author is NOT a member of the group must be completed. Steps where the original change author is a member of the approving group will be completed automatically, and noted in the workflow history as not required.
     - **Exclude:** similar to Explicit, in that all steps must be completed, but the original change author is not included in notifications or shown dashboard tasks
 - **Lock active content:** how should content in a workflow be managed? Set true or false to determine whether the approval group responsible for the active workflow step can make modifications to the content.
-- **Send notifications:** if your users are active in the backoffice, email notifications might not be required. Turn them off here.
-- **Workflow email:** Set a sender address for notification emails. This defaults to the system email as defined in umbracoSettings.config
-- **Site URL:** the URL for the public website (including schema - http[s])
-- **Edit site URL:** the URL for the editing environment (including schema - http[s])
 - **Exclude nodes:** nodes selected here are excluded from the workflow engine and will be published per the configured Umbraco user permissions. Requires license.
 - **Document-type approvals:** configure workflows to be applied to all content of the selected document type. Refer to [Approval flow types](#approval-flow-types) for more information. Requires license.
+
+### Notifications and reminders (from v1.6.0)
+
+Plumber 1.6.0 introduces a more mature and versatile notifications engine, allowing deep configuration of email notifications for all workflow activities. 
+
+From the settings view in the Workflow backoffice section, the notifications dashboard provides access to the following:
+
+- **Send notifications:** if your users are active in the backoffice, email notifications might not be required. Turn them off here.
+- **Reminder delay:** set a delay in days for sending reminder emails for outstanding workflow processes. Set to 0 to disable. 
+- **Workflow email:** set a sender address for notification emails. This defaults to the system email as defined in umbracoSettings.config
+- **Site URL:** the URL for the public website (including schema - http[s])
+- **Edit site URL:** the URL for the editing environment (including schema - http[s])
+- **Email templates:** configure which users receive emails for which workflow actions, and modify the templates for those emails
+
+#### Notifications
+
+Notification emails use HTML templates, rendering information from the `HtmlEmailModel` type, which lives in the `Plumber.Core.Models.Email` namespace. While it's entirely possible to modify the email templates from the backoffice, it's recommended to make changes via your IDE of choice, to enjoy the helping hand that is Intellisense.
+
+The `HtmlEmailModel` looks like this:
+
+- {WorkflowType} WorkflowType: an enum value, either 1 or 2, for Publish and Unpublish respectively
+- {DateTime?} ScheduledDate: if a scheduled date exists for the workflow, it is found here
+- {IHtmlString} Summary: a pre-generated representation of the current workflow state (essentially the same data as found in the pre-v1.6.0 email content
+- {WorkflowTaskViewModel} CurrentTask: the view model data for the current workflow task. Comes with a whole lot of useful data, best explored via Intellisense
+- {WorkflowInstanceViewModel} Instance: the view model data for the current workflow. Also best explored via Intellisense
+
+Base fields from `HtmlEmailBase`:
+- {string} SiteUrl: the public URL for your site
+- {string} NodeName: the name of the node from the current workflow
+- {string} Type: the UI-friendly workflow type. Includes the scheduled date if one exists
+- {EmailType} EmailType: an enum value representing the current email type, which relates directly to the workflow task type
+- {EmailUserModel} To: the model defining who receives the email
+  - {string} Email: the email address (or group address if the group email is set)
+  - {string} Name: the user's name
+  - {string} Language: the user's language
+  - {int} Id: the user's ID (or group ID when sending to a group email address) 	 	
+  - {bool} IsGroupEmail: are we sending to a generic group email address?
+
+#### Reminders
+
+v1.6.0 introduces a reminder email system, to prompt editors to complete pending workflows. Reminders are sent using Umbraco's internal task scheduler, every 24 hours after an initial delay. For example, setting the reminder delay value to 2 will allow pending workflows to sit for 2 days before sending reminder emails every 24 hours to all members of the group assigned to the pending workflow task.
+
+The emails use a similar model to the notification emails, also inheriting from `HtmlEmailBase`. In addition to the inherited fields, `HtmlReminderEmailModel` includes:
+- {IList<WorkflowTaskViewModel>}: OverdueTasks: a list containing all the overdue tasks assigned to the current user
+- {int} TaskCount: the count of overdue tasks assigned to he current user
+
+#### Localization
+
+All email models are fully localized (where translations exist), with the remaining template text available to edit in the backoffice or your IDE. Out of the box, Plumber's email templates are assumed to be for the default language. To add templates for other languages, duplicate the required template and append the culture code to the file name, prefixed with an underscorce:
+
+- Default approval request template: `~/View/Partials/WorkflowEmails/ApprovalRequest.cshtml`
+- Danish approval request template: `~/Views/Partials/WorkflowEmails/ApprovalRequest_da-DK.cshtml`
 
 ### Upgrades
 
@@ -63,7 +111,7 @@ Total groups is limited to 5 on unlicensed installs, the paid license removes th
 Provides an overview of the current workflow roles for the group, both node-based and document-type based.
 
 #### Members
-Manage the membership for the given user group. Easy.
+Manage the membership for the given user group. Members can be explicitly added to the group, or inherited from existing Umbraco groups. Ideally group members are set explicitly to ensure changes made to Umbraco groups don't cause unexpected changes to workflow permissions.
 
 #### History
 Provides an overview of the workflow activity for the current group.
