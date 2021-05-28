@@ -20,6 +20,8 @@ Rejecting a task returns the workflow to the original author, who can update the
 
 Plumber is a licensed product, but doesn't require a purchase to use. New installs are defaulted to a trial license, while the paid license is [available for purchase](https://thisredwolf.com). The trial license introduces some restrictions around advanced features but is otherwise a full-featured workflow platform. The paid license is valid for one top-level domain and all its subdomains.
 
+To impersonate the full license on a local site, drop a test license (an empty text file named `test.lic`) into /App_plugins/Plumber. The test license is restricted to naked `localhost` or `localtest` domains, or domains ending in `.test` or `.local`.
+
 ### Settings
 
 Plumber comes pre-wired with sensible defaults, but these should be modified to best suit your site.
