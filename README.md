@@ -23,4 +23,4 @@ There's a whole lot more boring stuff in the [EULA](EULA.md).
 
 ```Install-Package Plumber.Workflow```
 
-Drop [the test license](test.lic) into /App_plugins/Plumber to impersonate the Pro-level license on localhost, or generate a trial license from the Workflow section in the Umbraco backoffice.
+Drop a test license (an empty text file named `test.lic`) into /App_plugins/Plumber to impersonate the licensed version. The test license is restricted to naked `localhost` or `localtest` domains, or domains ending in `.test` or `.local`.
