@@ -42,9 +42,9 @@ From the settings view in the Workflow backoffice section, the notifications das
 
 - **Send notifications:** if your users are active in the backoffice, email notifications might not be required. Turn them off here.
 - **Reminder delay:** set a delay in days for sending reminder emails for outstanding workflow processes. Set to 0 to disable. 
-- **Workflow email:** set a sender address for notification emails. This defaults to the system email as defined in umbracoSettings.config
-- **Site URL:** the URL for the public website (including schema - http[s])
-- **Edit site URL:** the URL for the editing environment (including schema - http[s])
+- **Workflow email:** set a sender address for notification emails. MANDATORY
+- **Site URL:** the URL for the public website (including schema - http[s]). MANDATORY
+- **Edit site URL:** the URL for the editing environment (including schema - http[s]). MANDATORY
 - **Email templates:** configure which users receive emails for which workflow actions, and modify the templates for those emails
 
 #### Notifications
@@ -70,6 +70,14 @@ Base fields from `HtmlEmailBase`:
   - {string} Language: the user's language
   - {int} Id: the user's ID (or group ID when sending to a group email address) 	 	
   - {bool} IsGroupEmail: are we sending to a generic group email address?
+
+Plumber provides settings for determining who receives emails at which stages of a workflow. While these are set to default values on install, it's advised that these are updated to better suit your install. Emails can be sent to:
+- All: all participants in all workflow stages (previous and current)
+- Group: all members of the group assigned to the current task
+- Author: the user who initiated the workflow
+- Admin: the admin user
+
+By default, all emails are set to send to Group, but this isn't always the ideal - cancelled workflows would be best sent to the Author only, likewise with rejected. All would likely be most useful for notifying of completed workflows, but even this may be excessive. As said above, the best configuration will depend on your site, but most likely won't be the defaults.
 
 #### Reminders
 
