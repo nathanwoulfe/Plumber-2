@@ -1,4 +1,4 @@
-# Plumber 2 - the workflow solution for Umbraco 8
+# Plumber 2 - the workflow solution for Umbraco 8+
 [![Build Status](https://nathanwoulfe.visualstudio.com/Plumber%202/_apis/build/status/Plumber%208%20RTM%20CI?branchName=master)](https://nathanwoulfe.visualstudio.com/Plumber%202/_build/latest?definitionId=5&branchName=master)
 [![Build Status](https://nathanwoulfe.visualstudio.com/Plumber%202/_apis/build/status/Plumber%208%20DEV%20CI?branchName=master)](https://nathanwoulfe.visualstudio.com/Plumber%202/_build/latest?definitionId=4&branchName=master)
 [![NuGet release](https://img.shields.io/nuget/dt/Plumber.Workflow.svg)](https://www.nuget.org/packages/Plumber.Workflow)
