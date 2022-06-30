@@ -1,4 +1,4 @@
-# Plumber - the workflow solution for Umbraco 8 and 9
+# Plumber - the workflow solution for Umbraco
 [![Build Status](https://nathanwoulfe.visualstudio.com/Plumber%202/_apis/build/status/Plumber%208%20RTM%20CI?branchName=master)](https://nathanwoulfe.visualstudio.com/Plumber%202/_build/latest?definitionId=5&branchName=master)
 [![Build Status](https://nathanwoulfe.visualstudio.com/Plumber%202/_apis/build/status/Plumber%208%20DEV%20CI?branchName=master)](https://nathanwoulfe.visualstudio.com/Plumber%202/_build/latest?definitionId=4&branchName=master)
 [![NuGet release](https://img.shields.io/nuget/dt/Plumber.Workflow.svg)](https://www.nuget.org/packages/Plumber.Workflow)
@@ -8,7 +8,24 @@ Plumber adds a heap of useful bits and pieces to Umbraco, to allow multi-staged 
 
 In the backoffice, the new Workflow section has a documentation tab with detailed explanation of features and processes, or you can [read the documentation here](DOCS.md).
 
+## Supported Umbraco versions
+
+Plumber supports all Umbraco versions from 8 to current (10).
+
+For 8/9 support, install Plumber v2.1.7.
+
+For Umbraco 10, install Plumber v10. v10 includes breaking changes from the v2 branch, which will only be an issue for implementations that extended the core product. For 'normal' installs, it's business as usual.
+
+### Breaking changes in v10
+
+- Async everywhere. All services and repositories are now async where possible, but function names have not changed. If you're using a Plumber service in custom code, you'll need to await the response
+- Some ctors with new/reordered parameters
+- Some unused constants removed
+- Some unused extension methods removed
+- Some extension methods replaced with Umbraco equivalents
+
 ## Where's the code?
+
 Noticed this repo doesn't have any code? That's because Plumber is a licensed product, and the code is currently private. That may change in the future, but for the immediate future at least, it is how it is.
 
 Plumber will always have a free version. It still requires a valid license, but comes at no cost. The free version does have some restrictions on features and functionality (5 group maximum, some advanced features disabled), but those aside, is still a full-featured solution and will be perfect for smaller, less complex implementations.
