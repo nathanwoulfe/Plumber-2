@@ -12,7 +12,7 @@ In the backoffice, the new Workflow section has a documentation tab with detaile
 
 Plumber supports all Umbraco versions from 8 to current (10).
 
-For 8/9 support, install Plumber v2.1.7.
+For 8/9 support, install Plumber v2.
 
 For Umbraco 10, install Plumber v10. v10 includes breaking changes from the v2 branch, which will only be an issue for implementations that extended the core product. For 'normal' installs, it's business as usual.
 
@@ -23,14 +23,6 @@ For Umbraco 10, install Plumber v10. v10 includes breaking changes from the v2 b
 - Some unused constants removed
 - Some unused extension methods removed
 - Some extension methods replaced with Umbraco equivalents
-
-## Where's the code?
-
-Noticed this repo doesn't have any code? That's because Plumber is a licensed product, and the code is currently private. That may change in the future, but for the immediate future at least, it is how it is.
-
-Plumber will always have a free version. It still requires a valid license, but comes at no cost. The free version does have some restrictions on features and functionality (5 group maximum, some advanced features disabled), but those aside, is still a full-featured solution and will be perfect for smaller, less complex implementations.
-
-The paid license is a one-off, &euro;900 one-time payment. All features, no restrictions, no ongoing cost.
 
 There's a whole lot more boring stuff in the [EULA](EULA.md).
 
